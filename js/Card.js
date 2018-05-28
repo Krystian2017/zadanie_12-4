@@ -12,7 +12,7 @@ function Card(id, name) {
     var cardDescription = $('<p class="card-description"></p>');
     
     cardDeleteBtn.click(function(){
-       self.removeCard();
+      self.removeCard();
     });
 
     card.append(cardDeleteBtn);
@@ -29,7 +29,7 @@ Card.prototype = {
       url: baseUrl + '/card/' + self.id,
       method: 'DELETE',
       success: function(){
-        self.$element.remove();
+        self.element.remove();
       }
     });  
   }
